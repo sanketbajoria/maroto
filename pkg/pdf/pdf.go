@@ -3,13 +3,13 @@ package pdf
 import (
 	"bytes"
 
-	"github.com/johnfercher/maroto/internal/fpdf"
-	"github.com/johnfercher/maroto/pkg/color"
+	"github.com/sanketbajoria/maroto/internal/fpdf"
+	"github.com/sanketbajoria/maroto/pkg/color"
 
-	"github.com/johnfercher/maroto/internal"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/props"
 	"github.com/jung-kurt/gofpdf"
+	"github.com/sanketbajoria/maroto/internal"
+	"github.com/sanketbajoria/maroto/pkg/consts"
+	"github.com/sanketbajoria/maroto/pkg/props"
 )
 
 // Maroto is the principal abstraction to create a PDF document.
@@ -172,7 +172,7 @@ func (s *PdfMaroto) AddPage() {
 	maxOffsetPage := int(pageHeight - bottom - top)
 
 	s.Row(float64(maxOffsetPage-totalOffsetY), func() {
-		s.ColSpace(12)
+		s.ColSpace(24)
 	})
 }
 
@@ -366,10 +366,10 @@ func (s *PdfMaroto) Row(height float64, closure func()) {
 // components inside.
 func (s *PdfMaroto) Col(width uint, closure func()) {
 	if width == 0 {
-		width = 12
+		width = 24
 	}
 
-	percent := float64(width) / float64(12)
+	percent := float64(width) / float64(24)
 
 	pageWidth, _ := s.Pdf.GetPageSize()
 	left, _, right, _ := s.Pdf.GetMargins()
@@ -570,7 +570,7 @@ func (s *PdfMaroto) footer() {
 	maxOffsetPage := int(pageHeight - bottom - top)
 
 	s.Row(float64(maxOffsetPage-totalOffsetY), func() {
-		s.ColSpace(12)
+		s.ColSpace(24)
 	})
 
 	if s.footerClosure != nil {
@@ -585,7 +585,7 @@ func (s *PdfMaroto) header() {
 	s.SetBackgroundColor(color.NewWhite())
 
 	s.Row(s.marginTop, func() {
-		s.ColSpace(12)
+		s.ColSpace(24)
 	})
 
 	if s.headerClosure != nil {

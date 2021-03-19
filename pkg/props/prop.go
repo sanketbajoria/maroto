@@ -1,8 +1,8 @@
 package props
 
 import (
-	"github.com/johnfercher/maroto/pkg/color"
-	"github.com/johnfercher/maroto/pkg/consts"
+	"github.com/sanketbajoria/maroto/pkg/color"
+	"github.com/sanketbajoria/maroto/pkg/consts"
 )
 
 // Proportion represents a proportion from a rectangle, example: 16x9, 4x3...
@@ -260,7 +260,7 @@ func (s *TableList) MakeValid(header []string, defaultFamily string) {
 	}
 
 	if len(s.HeaderProp.GridSizes) == 0 {
-		gridSize := uint(12.0 / len(header))
+		gridSize := uint(24.0 / len(header))
 		s.HeaderProp.GridSizes = []uint{}
 
 		for range header {
@@ -285,7 +285,7 @@ func (s *TableList) MakeValid(header []string, defaultFamily string) {
 	}
 
 	if len(s.ContentProp.GridSizes) == 0 {
-		gridSize := uint(12.0 / len(header))
+		gridSize := uint(24.0 / len(header))
 		s.ContentProp.GridSizes = []uint{}
 
 		for range header {

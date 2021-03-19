@@ -3,15 +3,16 @@ package pdf_test
 import (
 	"bytes"
 	"fmt"
-	"github.com/johnfercher/maroto/internal"
-	"github.com/johnfercher/maroto/pkg/color"
 	"testing"
 
-	"github.com/johnfercher/maroto/internal/mocks"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/pdf"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/sanketbajoria/maroto/internal"
+	"github.com/sanketbajoria/maroto/pkg/color"
+
 	"github.com/pkg/errors"
+	"github.com/sanketbajoria/maroto/internal/mocks"
+	"github.com/sanketbajoria/maroto/pkg/consts"
+	"github.com/sanketbajoria/maroto/pkg/pdf"
+	"github.com/sanketbajoria/maroto/pkg/props"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )
